@@ -3,7 +3,7 @@
 	<meta charset="UTF-8">
 <head>
     <title>Book Bazar (Online book store)</title>
-    <link rel="stylesheet" type="text/css" href="css/styleregister.css">
+    <link rel="stylesheet" type="text/css" href="css/stylereister.css">
     <!--Responsive design-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 </head>
@@ -18,13 +18,15 @@
           <div class="navcart"><a href="#" target="_blank"><img src="img/cart.jpeg"></a></div>
       </nav>
       <!--logo and background image-->
-<header class="header">
+  <header class="header">
     <div class="headerbacground"></div>
-    <div class="headerlogo"><a href="#" target="_blank"><img src="img/logo2.png"></a></div>
-</header>
-      <!--main content body with registration details-->
-<section class="content">
-        <form>            
+    <div class="headerlogo"><a href="#" target="_blank"><img src="img/logo.png"></a></div>
+  </header>
+      <!--main content boy with all product details-->
+      <section class="content">
+        
+        <form>
+                <br><h2>Your personal details</h2><br>
                 <label class="position" for="firstname">First Name:</label>
                 <input type="text" name="firstname" placeholder="***" value="" maxlength="12" id="firstname" required><br>
 
@@ -54,15 +56,21 @@
                       <option value="brazil">Brazil</option>
                       <option value="canada">Canada</option>
                       <option value="denmark">Denmark</option>
-        </select><br><br>
+                </select><br><br>
+            
+                <label class="position" for="mycell">Mobile:</label>
+                <input type="tel" name="phone" pattern="[0-9]{4}-[0-9]{3}-[0-9]{3}" placeholder="1234567890"><br>
                 
                 <label class="position" for="myemail">Email:</label>
                 <input type="email" name="email" placeholder="info@email.com" id="myemail" value=""><br>
-
-                <label class="position" for="mycell">Mobile:</label>
-                <input type="tel" name="phone" pattern="[0-9]{4}-[0-9]{3}-[0-9]{3}" placeholder="1234567890"><br><br>
-    
-                <input type="submit" value="Register">
+                
+                  <label class="position" for="newpassword">New Password:</label>
+                <input type="password" name="mypassword" placeholder="*****" id="newpassword" value=""><br>
+                
+                <label class="position" for="confirmpassword">Confirm Password:</label>
+                <input type="password" name="mypassword" placeholder="*****" id="confirmpassword" value=""><br><br>
+            
+                <input type="submit" value="Register" class="register">
           </form>
       </section>
       
@@ -77,3 +85,4 @@
      
 </body>
 </html>
+

@@ -2,155 +2,522 @@
 
 body{background-size: 90%;}
 
-.navigation {
-  grid-area: navigation;
-}
-.logo {
-  grid-area: logo;
-}
-.content {
-  grid-area: content;
-}
-.footer {
-  grid-area: footer;
-}
+.navigation {grid-area: navigation;}
+.header {grid-area: header;}
+.content {grid-area: content;}
+.footer {grid-area: footer;}
+
 .container {
-  width: 100%;
+  width: 100%;/*100% of 90% body background-size*/
   text-align: center;
+    
   display: grid;
+    grid-gap: 1% 1%;
   grid-template-columns: 1fr;
- grid-template-rows: repeat(4, minmax(100px, auto));
+  grid-template-rows: repeat(4, minmax(60px, auto));
     
   grid-template-areas: 
     "navigation"
-    "logo"
+    "header"
     "content"
     "footer";
 }
 
-/*header start*/
-header{
+/* Hide the checkbox */
+input[type=checkbox] {
+    position: fixed;
+    visibility: hidden;
+}
+/* start toggle */
+.nav-alter {
+    display: block;
+    position: fixed;
+    top: 10px;
+    left: 0px;
+    height: 32px;
+    width: 40px;
+    cursor: pointer;
+    z-index: 99;
+    margin-left: 10px;
+    transition: margin .3s;}
+.nav-alter span {
     position: relative;
-    overflow: auto;
-    background-image: url("../img/home.jpg");
-    background-attachment:;
-    background-repeat: no-repeat;
-    background-size:100%;
-    }
+    display: block;
+    height: 2px;
+    width: 45px;
+    background: #000;
+    transition: all .3s;
+    background-color: #000000;}
+.nav-alter span:nth-child(2) {top: 12px;}
+.nav-alter span:nth-child(3) {top: 24px;}
 
-.logo img{
-    margin-left: 250px;
-    height: 70px;
+/*moving toggle */
+input[type=checkbox]:checked ~ .nav-alter {margin-right: 290px;}
+input[type=checkbox]:checked ~ .nav-alter span:nth-child(1) {top: 15px;
+    transform: scale(0.5) rotate(-45deg);}
+input[type=checkbox]:checked ~ .nav-alter span:nth-child(2) {display: none;}
+input[type=checkbox]:checked ~ .nav-alter span:nth-child(3) {top: 13px;
+    transform: scale(0.5) rotate(45deg);}
+
+/*menu moving*/
+input[type=checkbox]:checked ~ .menucontainer .menu {
+    margin-left: 0;
+    background-color: rgb(0, 0, 0, 0.4);
+}
+
+/* The menu */
+.menu {
+    position: fixed;
+    top: 0;
+    width:100%;
+    margin-top: 52px;
+    margin-left: -570px;
+    transition: margin .1s;
+}
+ul {
+    list-style: none;
+    margin-top: 15px;
+}
+
+.menu ul ul {
+    max-height: 0;
+    overflow:hidden;
+    transition: max-height .3s;
+}
+
+.menu ul li:hover > ul {
+    max-height: 600px;
+    height: auto;
+}
+
+li a {
+    text-decoration: none;
+    display: block;
+    color: #ffffff;
+    font-size: 22px;
+    font-family: sans-serif;
+}
+
+/*start adding pseudo element*/
+li a::after {
+    content: '+';
+    transition: .2s;
+    display: inline-block;
+    margin-left: 5px
+}
+
+li a:hover::after {
+    content: '+';
+    transform: rotate(45deg);
+}
+
+li a:only-child::after {
+    content: '';
 }
 
 
 /*navigation start*/
 nav{
     width: 100%; 
-    height: 40px;
-    border: 1px solid #000000;
+    
     background-color: #273A5E;
     color: #ffffff;
     display: flex;
     align-items: center;
 }
 
-.navhome{margin: 5px;}
-.navproduct{margin: 5px;}
-.navcontact{margin: 5px;}
-.navcart{
-    margin-left: auto;
-    margin-right: 5px;
+.navregister{margin-left:auto;}
+
+.navregister a{color: #ffffff;
+    font-family: sans-serif;
 }
+.navregister a:hover{
+    opacity: 0.6;
+}
+
+.navcart{margin-left: auto;}
 .navcart img{
     height: 40px;
+    margin-right: 15px;
 }
 
-/*content start*/
-/*main{
+/*header start*/
+.header{
     width: 100%;
-    border: 1px solid #000000;
-    text-align: center;
-}*/
-.contentrightside{
-    width: 100%;
-    background-color: #f5f5dc;
+    height: 220px;
     
+    position:fix;
+    overflow: auto;
+    
+    background: url(../img/home.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center;
+    
+    display: flex;
+    align-items: center;
 }
-.contentrightside1{}
-.contentrightside2{}
-.contentrightside3{}
+.headerlogo{
+     margin-left: auto;
+    margin-right: 20px;
+}
+.headerlogo img{
+    width: 70px;
+    height: 70px; 
+}
 
-.contentleftside{
-    width: 100%;
-    background-color: #ffe4c4;
+
+/*content for booklist*/
+.contentbooklist{
+    margin-top:90px ;
+    margin-bottom:190px;
+    display: grid;
+    grid-gap: 2% 2%;
+     grid-template-columns: repeat(2,1fr);
+    grid-template-rows: auto; 
 }
-.contentleftside1{}
-.contentleftside2{}
-.contentleftside3{}
+
+.contentbooklist1,.contentbooklist2,.contentbooklist3,
+.contentbooklist4,.contentbooklist5,.contentbooklist6,
+.contentbooklist7,.contentbooklist8,.contentbooklist9,
+.contentbooklist10,.contentbooklist11,.contentbooklist12{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.contentbooklist img{
+    height: 197px;
+}
+
+.price {
+  color: grey;
+  font-size: 20px;
+}
+
+.text{
+    font-family:cursive;
+    font-size: 14px;
+}
+
+.quantity{
+    font-family:sans-serif;
+    font-size: 16px;
+}
+
+input[type="number"] {
+    width: 15%;
+    height: 4vh;
+    text-align: center;
+    color: #151314;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+
+.contentbooklist button{
+    color: #ffffff;
+    background-color: #4cadad;
+    text-align: center;
+    width: 90%;
+    font-size: 18px;
+    border: none;
+    outline: 0;
+    padding: 8px;
+    margin-bottom: 15px;
+   
+}
+
+.contentbooklist button:hover{
+    opacity: 0.5;
+}
 
 
 /*footer start*/
 footer{
     width: 100%; 
-    border: 1px solid #000000;
     text-align: center;
+    color: #ffffff;
     background-color: #273A5E;
+}
+
+footer a{
     color: #ffffff;
 }
 
-.footer img{width: 20px;height: 20px;}
-
-.footer1{}
-.footer2{}
-.footer3{}
 .footer4{}
+.footer3{}
+.footer img{width: 20px;height: 20px;}
+.footer2{}
+.footer1{}
+
+
+
 
 
 
 
 /*media query for ipad*/
-@media (min-width: 768px) and (max-width: 1200px){
+@media (min-width: 768px) and (max-width: 960px){
+
+.nav-alter {
+        display: none;
+    }
+.menu {
+       margin-top: 0;
+        margin-left: 0; 
+    }
+
+.menu ul {
+        padding: 0;
+        margin: 0;
+        position: relative;
+        list-style: none;
+    }
+
+.menu ul li {
+        display: inline-block;
+        background-color: rgba(0, 0, 0, 0.4);
+        width: auto;
+        position: relative;
+        margin-left: -4px;
+    }
+
+.menu a {
+        display: block;
+        padding: 0 10px;
+        color: #FFF;
+        font-size: 16px;
+        line-height: 60px;
+        text-decoration: none;
+    }
+
+.menu a:hover {
+        background-color: #000000;
+    }
+
+    /* keeps the dropdown invisible and assign style to list*/
+.menu ul ul {
+        display: none;
+        position: absolute;
+        overflow: visible;
+        top: 60px;
+        margin-left: -32px;
+        width: 147px;
+    }
+
+    /* show dropdown 1st 2nd level on hover */
+.menu ul li:hover > ul {
+        display: inherit;
+    }
+
+    /* 1st level */
+.menu ul ul li {
+        display: list-item;
+        float: none;
+        position: relative;
+    }
+
     
 nav{height: 100%;}
-    
-header{height: 290px;}
-
-.logo img{
-    margin-left: 750px;
-    margin-top:100px;}
-    
+.navregister{margin-left:20px;}
 .navcart img{margin-right: 90px;}
+
+.header{height: 300px;}
+
+.headerlogo img{
+    width: 90px;
+    height: 90px; 
+}
+
+.contentbooklist{
+    margin-top:0;
+    margin-bottom:50px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: auto;
+}
+
+    
     
 footer{
     display:grid;
-    grid-gap: 2px;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: auto;
+    }   
+
+}
+
+
+
+
+
+@media (min-width: 960px) and (max-width: 1024px){
+    
+.nav-alter{display: none;}
+
+.menu {
+       margin-top: 0;
+      margin-left: 0;
+    }
+
+.menu ul {
+        padding: 0;
+        margin: 0;
+        position: relative;
+        list-style: none;
+    }
+
+.menu ul li {
+        display: inline-block;
+        background-color: rgba(0, 0, 0, 0.4);
+        width: auto;
+        position: relative;
+        margin-left: -4px;
+    }
+
+.menu a {
+        display: block;
+        padding: 0 10px;
+        color: #FFF;
+        font-size: 16px;
+        line-height: 60px;
+        text-decoration: none;
+    }
+
+.menu a:hover {
+        background-color: #000000;
+    }
+
+/* keeps the dropdown invisible and assign style to list*/
+.menu ul ul {
+        display: none;
+        position: absolute;
+        overflow: visible;
+        top: 60px;
+       margin-left: -32px;
+        width: 147px;
+    }
+
+/* show dropdown 1st 2nd level on hover */
+.menu ul li:hover > ul {
+        display: inherit;
+    }
+
+/* 1st level */
+.menu ul ul li {
+        display: list-item;
+        float: none;
+        position: relative;
+    }
+.navregister{margin-left:20px;}
+.contentbooklist{
+    margin-top:0;
+    margin-bottom:10px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: auto;
+} 
+    
+footer{
+    display:grid;
     grid-template-columns: repeat(2,1fr);
     grid-template-rows: auto;
     }    
     
 }
 
+
+
+
+
+
 /*media query for desktop*/
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1024px) {
 
+.nav-alter {display: none;}
+    
+.menu {
+    margin-top: 0;
+    margin-left: 0; 
+    }
+
+.menu ul {
+        padding: 0;
+        margin: 0;
+        position: relative;
+        list-style: none;
+    }
+
+.menu ul li {
+        display: inline-block;
+        background-color: rgba(0, 0, 0, 0.4);
+        width: auto;
+        position: relative;
+        margin-left: -4px;
+    }
+
+.menu a {
+        display: block;
+        padding: 0 10px;
+        color: #FFF;
+        font-size: 16px;
+        line-height: 60px;
+        text-decoration: none;
+    }
+
+.menu a:hover {background-color: #000000;}
+
+    /* keeps the dropdown invisible and assign style to list*/
+.menu ul ul {
+        display: none;
+        position: absolute;
+        overflow: visible;
+        top: 60px;
+       margin-left: -30px;
+        width: 145px;
+    
+    }
+
+    /* show dropdown 1st 2nd level on hover */
+.menu ul li:hover > ul {
+        display: inherit;
+    }
+
+    /* 1st level */
+.menu ul ul li {
+        display: list-item;
+        float: none;
+        position: relative;
+    }
+    
+    
 nav{height: 100%;}
-.navhome{margin: 15px;}
-.navproduct{margin: 15px;}
-.navcontact{margin: 15px;}  
-header{height: 300px;}
-
-.logo img{
-    margin-left: 750px;
-    margin-top:100px;}
-
+.navregister{margin-left:20px;}    
 .navcart img{margin-right: 100px;}
-
+    
+.header{
+    height: 350px;
+    }
+    
+.headerlogo{margin-right: 90px;}
+.headerlogo img{
+    width: 200px;
+    height: 200px; 
+}
+ 
+.contentbooklist{
+    margin-top:0;
+    margin-bottom:10px;
+    
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: auto;
+}
+    
 footer{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;}
+    display:grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: auto;
+}
     
 .footer1{margin-left: 15px;}
 .footer2{}
