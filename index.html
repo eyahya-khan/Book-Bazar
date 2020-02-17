@@ -4,46 +4,176 @@
 <head>
     <title>Book Bazar (Online book store)</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <!--connect bootstrap-->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <!--Responsive design-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--show favicon icon bar in tittle bar-->
-    <link rel="shortcut icon" href="img/favicon.jpeg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 </head>
 
 <body>
-       <header class="bbheader">
-          <div class="logo">logo</div>
-          <div class="headermenu">Book Bazar (Online book store)</div>
-      </header>
-      <!--manu bar-->
+      <main class="container">
+      
+      <!--start hamburger bar-->
+        <input type="checkbox" id="nav-toggle">
+        <label class="nav-alter" for="nav-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+      
+       <!--manu bar-->
+       <div class="menucontainer">
+          <div class="menu">
+              <ul>
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#">About</a></li>
+                  <li><a href="#">Book</a>
+                      <ul>
+                          <!--start 2nd lavel-->
+                          <li><a href="register.html">register</a></li>
+                          <li><a href="#">Data & IT</a></li>
+                          <li><a href="#">Science fiction</a></li>
+                      </ul>
+                  </li>
+                  <li><a href="#">Contact</a></li>
+              </ul>
+          </div>
+          </div>
+       
       <nav class="navigation">
-          <div class="navhome">Home</div>
-          <div class="navproduct">Product</div>
-          <div class="navcontact">Contact</div>
-          <div class="navcart">Cart</div>
+          <div class="navregister"><a href="register.html" target="_blank">Register</a></div>
+          <div class="navcart"><a href="#" target="_blank"><img src="img/cart.jpeg"></a></div>
       </nav>
       
-      <main class="content">
-          <div class="contentrightside">
-              <div class="contentrightside1">content rightside 1</div>
-              <div class="contentrightside2">content rightside 2</div>
-              <div class="contentrightside3">content rightside 3</div>
-          </div>
-          <div class="contentleftside">
-               <div class="contentleftside1">content leftside 1</div>
-               <div class="contentleftside2">content leftside 2</div>
-               <div class="contentleftside3">content leftside 3</div>
-          </div>
-      </main>
+      <!--logo and background image-->
+  <header class="header">
+    <div class="headerbacground"></div>
+    <div class="headerlogo"><a href="#" target="_blank"><img src="img/logo.png"></a></div>
+  </header>
+      <!--main content boby with all product details-->
+          <section class="content">
+              <div class="contentbooklist">
+                  <div class="contentbooklist1">
+                      <a href="#" target="_blank"><img src="img/html5.jpg"></a>
+                      <p class="price">SEK 70,00 kr</p>
+                      <p class="text">Del Carnegi, New Release Publications</p>
+                      <label class="quantity" for="howmanyperson">Quantity:</label>
+                    <input type="number" name="quantity" id="quantity" placeholder="1" value="" min="1" max="10" required>
+                      <p><button>Add to Cart</button></p>
+                  </div>
+
+                  <div class="contentbooklist2">
+                      <a href="#" target="_blank"><img src="img/html&css.jpg"></a><br>
+                      <p class="price">SEK 172,50 kr</p>
+                      <p class="text">Del Carnegi, McMillan Publications</p>
+                      <label class="quantity" for="howmanyperson">Quantity:</label>
+                    <input type="number" name="quantity" id="quantity" placeholder="1" value="" min="1" max="10" required>
+                      <p><button>Add to Cart</button></p>
+                  </div>
+
+                  <div class="contentbooklist3">
+                      <a href="#" target="_blank"><img src="img/htmlcssjavascript.jpg"></a><br>
+                      <p class="price">SEK 270,00 kr</p>
+                      <p class="text">Del Carnegi, New Release Publications</p>
+                      <label class="quantity" for="howmanyperson">Quantity:</label>
+                    <input type="number" name="quantity" id="quantity" placeholder="1" value="" min="1" max="10" required>
+                      <p><button>Add to Cart</button></p>              
+                  </div>
+
+                  <div class="contentbooklist4">
+                      <a href="#" target="_blank"><img src="img/animalfirm.jpg"></a>
+                      <p class="price">SEK 370,00 kr</p>
+                      <p class="text">Del Carnegi, Pearson Publications</p>
+                      <label class="quantity" for="howmanyperson">Quantity:</label>
+                    <input type="number" name="quantity" id="quantity" placeholder="1" value="" min="1" max="10" required>
+                      <p><button>Add to Cart</button></p>           
+                  </div>
+
+                  <div class="contentbooklist5">
+                      <a href="#" target="_blank"><img src="img/ecommerce.jpg"></a><br>
+                      <p class="price">SEK 70,00 kr</p>
+                      <p class="text">Del Carnegi, New Release Publications</p>
+                      <label class="quantity" for="howmanyperson">Quantity:</label>
+                    <input type="number" name="quantity" id="quantity" placeholder="1" value="" min="1" max="10" required>
+                      <p><button>Add to Cart</button></p>            
+                  </div>
+
+                  <div class="contentbooklist6">
+                      <a href="#" target="_blank"><img src="img/howtheinternethappened.jpeg"></a><br>
+                      <p class="price">SEK 70,00 kr</p>
+                      <p class="text">Del Carnegi, New Release Publications</p>
+                      <label class="quantity" for="howmanyperson">Quantity:</label>
+                    <input type="number" name="quantity" id="quantity" placeholder="1" value="" min="1" max="10" required>
+                      <p><button>Add to Cart</button></p>
+                  </div>
+
+                  <div class="contentbooklist7">
+                      <a href="#" target="_blank"><img src="img/Howtowinfriends.jpg"></a><br>
+                      <p class="price">SEK 70,00 kr</p>
+                      <p class="text">Del Carnegi, New Release Publications</p>
+                      <label class="quantity" for="howmanyperson">Quantity:</label>
+                    <input type="number" name="quantity" id="quantity" placeholder="1" value="" min="1" max="10" required>
+                      <p><button>Add to Cart</button></p>
+                  </div>
+
+                  <div class="contentbooklist8">
+                      <a href="#" target="_blank"><img src="img/notadietbook.jpg"></a>
+                      <p class="price">SEK 70,00 kr</p>
+                      <p class="text">Del Carnegi, New Release Publications</p>
+                      <label class="quantity" for="howmanyperson">Quantity:</label>
+                    <input type="number" name="quantity" id="quantity" placeholder="1" value="" min="1" max="10" required>
+                      <p><button>Add to Cart</button></p>
+                  </div>
+
+                  <div class="contentbooklist9">
+                      <a href="#" target="_blank"><img src="img/techtitansofchinahowchina.jpeg"></a>
+                      <p class="price">SEK 70,00 kr</p>
+                      <p class="text">Del Carnegi, New Release Publications</p>
+                      <label class="quantity" for="howmanyperson">Quantity:</label>
+                    <input type="number" name="quantity" id="quantity" placeholder="1" value="" min="1" max="10" required>
+                      <p><button>Add to Cart</button></p>
+                  </div>
+                  <div class="contentbooklist10">
+                      <a href="#" target="_blank"><img src="img/bazaar.jpg"></a>
+                      <p class="price">SEK 70,00 kr</p>
+                      <p class="text">Del Carnegi, New Release Publications</p>
+                      <label class="quantity" for="howmanyperson">Quantity:</label>
+                    <input type="number" name="quantity" id="quantity" placeholder="1" value="" min="1" max="10" required>
+                      <p><button>Add to Cart</button></p>
+                  </div>
+                  <div class="contentbooklist11">
+                      <a href="#" target="_blank"><img src="img/babyshark.jpg"></a>
+                      <p class="price">SEK 70,00 kr</p>
+                      <p class="text">Del Carnegi, New Release Publications</p>
+                      <label class="quantity" for="howmanyperson">Quantity:</label>
+                    <input type="number" name="quantity" id="quantity" placeholder="1" value="" min="1" max="10" required>
+                      <p><button>Add to Cart</button></p>
+                  </div>
+                  <div class="contentbooklist12">
+                      <a href="#" target="_blank"><img src="img/penguin.jpg"></a>
+                      <p class="price">SEK 70,00 kr</p>
+                      <p class="text">Del Carnegi, New Release Publications</p>
+                      <label class="quantity" for="howmanyperson">Quantity:</label>
+                    <input type="number" name="quantity" id="quantity" placeholder="1" value="" min="1" max="10" required>
+                      <p><button>Add to Cart</button></p>
+                  </div>
+              </div>
+      </section>
+      
       <!--footer-->
-      <footer class="bbfooter">
-          <div class="bbfooter1">footer section 1</div>
-          <div class="bbfooter2">footer section 2</div>
-          <div class="bbfooter3">footer section 3</div>
-          <div class="bbfooter4">@Copyright 2020</div>
+      <footer class="footer">
+          <div class="footer1">Address:<br><a href="googlemap.html" target="_blank"> Åsogatan 117<br>116 24 Stockholm</a></div>
+          
+          <div class="footer2">
+        <label for="myemail">Contact us:</label><br>
+        <a href="mailto:eyahyakhan@gmail.com?subject=Mymail&body=hello" title="my email address" id="myemail">info@email.com</a>
+        
+        <label for="mycell"></label><br>
+        <a href="tel:+4677765342" title="contact number" id="mycell">0761 556677</a>
+    </div>
+          
+          <div class="footer3">Follow us:<br><a href="#" target="_blank"><img src="img/facebook.png"></a><a href="#" target="_blank"><img src="img/twitter.jpeg"></a><a href="#" target="_blank"><img src="img/instagram.jpeg"></a><a href="#" target="_blank"><img src="img/pinterest.png"></a></div>
+          <div class="footer4"><a href="#" target="_blank">Cookies</a><br><a href="#" target="_blank">Privacy Policy</a><br><a href="#" target="_blank">Terms and Conditions</a><br>@Copyright 2020</div>
      </footer>
+     </main>
      
 </body>
 </html>
