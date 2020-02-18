@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+	<html>
+	<meta charset="UTF-8">
+<head>
+    <title>Book Bazar (Online book store)</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="style-product-list-page.css">
+    <!--Responsive design-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--show favicon icon bar in tittle bar-->
+    <link rel="shortcut icon" href="img/favicon.jpeg">
+</head>
+
+<body>
+       <header class="bbheader">
+          <div class="logo">logo</div>
+          <div class="headermenu">Book Bazar (Online book store)</div>
+      </header>
+      <!--manu bar-->
+      <nav class="navigation">
+          <div class="navhome">Home</div>
+          <div class="navproduct">Product</div>
+          <div class="navcontact">Contact</div>
+          <div class="navcart">Cart</div>
+      </nav>
+      <main class="container">
+       
+        <section class="section5">
+            <div class="card">
+                <img class="card-img" src="img/favoritrecept.jpg">
+                <h4 class="card-text">Thai cooking to love</h4>
+                <button class="order-button">Order here</button>
+            </div>
+            <div class="card">
+                <img class="card-img" src="img/al-book.jpg">
+                <h4 class="card-text">Life in Sea</h4>
+                <button class="order-button">Order here</button>
+            </div>
+            <div class="card">
+                <img class="card-img" src="img/medeltid.jpg">
+                <h4 class="card-text">Learn history to make history</h4>
+                <button class="order-button">Order here</button>
+            </div>
+            <div class="card">
+                <img class="card-img" src="img/trad.jpg">
+                <h4 class="card-text">Gardening</h4>
+                <button class="order-button">Order here</button>
+            </div>
+            <div class="card">
+                <img class="card-img" src="img/chill.jpg">
+                <h4 class="card-text">Chill out!</h4>
+                <button class="order-button">Order here</button>
+            </div>
+            <div class="card">
+                <img class="card-img" src="img/arabic-pippi.png">
+                <h4 class="card-text">Arabic Kids</h4>
+                <button class="order-button">Order here</button>
+            </div>
+        </section>
+
+        <section class="section6">
+            <div id="select-accordion">
+                <h1 id="filter-books">Books selection</h1>
+                <button class="dropaccordion">Fiction</button>
+                <div class="txt">
+                    
+                        <form id="selec-book-form">
+                            <div class="formdiv">
+                                <label for="select-topic"></label>
+                            <input type="checkbox" name="scary" value="scary">Thrillers & Horror<br>
+                            <input type="checkbox" name="romance" value="romance">Romance<br>
+                            <input type="checkbox" name="fantasy" value="fantasy" checked="fantasy">Fantacy<br>
+                            <br>
+                            </div>
+                        </form>
+                
+                </div>
+            
+                <button class="dropaccordion">Languages</button>
+                <div class="txt">
+                    <p>
+                        <form id="selec-book-form" action="http://httpbin.org/anything" method="POST">
+                            <div class="formdiv">
+                                <label for="select-topic"></label>
+                            <input type="checkbox" name="scary" value="scary">Learn a Language<br>
+                            <input type="checkbox" name="French" value="French">French<br>
+                            <input type="checkbox" name="Swedish" value="Swedish">Swedish<br>
+                            <input type="checkbox" name="Russian" value="Russian">Russian<br>
+                            <input type="checkbox" name="Spanish" value="Spanish">Spanish<br>
+                            <input type="checkbox" name="Zerbian" value="Zerbian">Zerbian<br>
+                            <input type="checkbox" name="Arabic" value="Arabic">Arabic<br>
+                            <br>
+                            <p>Let us know if we are missing anything in your language, we will order it for you!</p>
+                            </div>
+                        </form>
+                    </p>
+                </div>
+
+                <button class="dropaccordion">Kids</button>
+                <div class="txt">
+                    <p>
+                        <form id="selec-book-form">
+                            <div class="formdiv">
+                                <label for="select-topic"></label>
+                            <input type="checkbox" name="0-3" value="0-3"> 0-3 Years<br>
+                            <input type="checkbox" name="3-6" value="3-6"> 3-6 Years<br>
+                            <input type="checkbox" name="6-12" value="6-12">6-12 Years<br>
+                            <br>
+                            </div>
+                        </form>
+                    </p>
+                </div>
+
+                <button class="dropaccordion">Food</button>
+                <div class="txt">
+                    <p>
+                        <form id="selec-book-form">
+                            <div class="formdiv">
+                                <label for="select-topic"></label>
+                            <input type="checkbox" name="Dinner" value="Dinner">Dinner<br>
+                            <input type="checkbox" name="International" value="International">International<br>
+                            <input type="checkbox" name="Desserts" value="Desserts">Desserts<br>
+                            <br>
+                            </div>
+                        </form>
+                    </p>
+                </div>
+                <button class="search btn">Search</button>
+            </div>
+            <div class="sidetext">
+            <p>Become a member of the bookclub, as a part of our family you will recive a discount on all your purchases and other extras!</p>
+           <button class=" join btn">Join Our Family!</button>
+           <div class="side-img">
+               <img class="side-img" src="img/woman-books.jpg">
+            </div>
+            </div>
+        </section> 
+      
+      <!--footer-->
+ <footer class="footer">
+    <div class="footer1">footer section 1</div>
+    <div class="footer2">footer section 2</div>
+    <div class="footer3">footer section 3</div>
+    <div class="footer4">@Copyright 2020</div>
+</footer>
+</main>
+     <script src="product-list-page.js"></script>
+</body>
+</html>
+
