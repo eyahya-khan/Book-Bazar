@@ -48,7 +48,7 @@ width: auto;
 height: auto;
 border-block-end: 1px solid black;
 width: 250px;
-background-color: white);
+background-color: white;
 flex-grow: 1;
 display: flex;
 flex-direction: column;
@@ -75,7 +75,7 @@ margin: 0 auto;
 transform: translateY(4px) translateX(4px); 
 box-shadow: 2px 2px 0px 0px #fff;
 }
-//** ACCORDION - Selection *///
+/** ACCORDION - Selection */
 
 h1 #filter-books {
 padding-bottom: 20px;
@@ -266,3 +266,4 @@ height: auto;
     .footer {
         grid-column: col-start 1 / -1;
     }
+}
