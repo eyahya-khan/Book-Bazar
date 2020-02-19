@@ -28,7 +28,7 @@
                     <li><a href="#">Book</a>
                         <ul>
                             <!--start 2nd lavel-->
-                            <li><a href="#">Kids</a></li>
+                            <li><a href="product-collection-page.html">Product-list</a></li>
                             <li><a href="#">Data & IT</a></li>
                             <li><a href="#">Science fiction</a></li>
                         </ul>
@@ -104,13 +104,13 @@
                     <input type="text" name="cardnumber" id="cardnumber" placeholder="12345678" value="" required><br>
 
                     <label class="position" for="expmonth">Exp month:</label>
-                    <input type="number" name="expmonth" id="expmonth" placeholder="011" value="" required><br>
+                    <input type="number" name="expmonth" id="expmonth" placeholder="01" value="" min="01" max="12" required><br>
 
                     <label class="position" for="expyear">Exp year:</label>
-                    <input type="number" name="expyear" id="expyear" placeholder="2020" value="" required><br>
+                    <input type="number" name="expyear" id="expyear" placeholder="2020" value="" min="2020" max="2030" required><br>
 
-                    <label class="position" for="howmanyperson">CVV:</label>
-                    <input type="number" name="quantity" id="quantity" placeholder="111" value="" required><br><br>
+                    <label class="position" for="cvv">CVV:</label>
+                     <input type="text" name="cvvnumber" id="cvvnumber" placeholder="567" value="" required><br><br><br>
 
                 </div>
             </div>
