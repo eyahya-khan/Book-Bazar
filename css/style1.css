@@ -346,8 +346,9 @@ select{
     -webkit-box-shadow:none;
 }
 .form-style-1 .required{
-    color:red;
+    color:#09FBF8;
 }
+
 @media (min-width: 960px) and (max-width: 1024px) {
 
     .nav-alter {
@@ -418,7 +419,7 @@ select{
         margin-top: 0;
         margin-bottom: 10px;
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(3, 1fr);
         grid-template-rows: auto;
     }
 
@@ -546,3 +547,96 @@ select{
         margin-right: 15px;
     }
 }
+/*media query for ipad*/
+@media (min-width: 768px) and (max-width: 960px){
+
+.nav-alter {
+        display: none;
+    }
+.menu {
+       margin-top: 0;
+        margin-left: 0; 
+    }
+
+.menu ul {
+        padding: 0;
+        margin: 0;
+        position: relative;
+        list-style: none;
+    }
+
+.menu ul li {
+        display: inline-block;
+        background-color: rgba(0, 0, 0, 0.4);
+        width: auto;
+        position: relative;
+        margin-left: -4px;
+    }
+
+.menu a {
+        display: block;
+        padding: 0 10px;
+        color: #FFF;
+        font-size: 16px;
+        line-height: 60px;
+        text-decoration: none;
+    }
+
+.menu a:hover {
+        background-color: #000000;
+    }
+
+    /* keeps the dropdown invisible and assign style to list*/
+.menu ul ul {
+        display: none;
+        position: absolute;
+        overflow: visible;
+        top: 60px;
+        margin-left: -32px;
+        width: 147px;
+    }
+
+    /* show dropdown 1st 2nd level on hover */
+.menu ul li:hover > ul {
+        display: inherit;
+    }
+
+    /* 1st level */
+.menu ul ul li {
+        display: list-item;
+        float: none;
+        position: relative;
+    }
+
+    
+nav{height: 100%;}
+.navregister{margin-left:20px;}
+.navcart img{margin-right: 90px;}
+
+.header{height: 300px;}
+
+.headerlogo img{
+    width: 90px;
+    height: 90px; 
+}
+
+.contentbooklist{
+    margin-top:0;
+    margin-bottom:50px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: auto;
+}
+
+    
+    
+footer{
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: auto;
+    }   
+
+}
+
+
+
