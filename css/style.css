@@ -133,7 +133,7 @@ li a {
     text-decoration: none;
     display: block;
     color: #ffffff;
-    font-size: 22px;
+    font-size: 18px;
     font-family: sans-serif;
 }
 
@@ -201,8 +201,6 @@ nav {
     width: 70px;
     height: 70px;
 }
-
-
 /*content for booklist*/
 .contentbooklist {
     margin-top: 90px;
@@ -212,7 +210,6 @@ nav {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto;
 }
-
 .contentbooklist1,
 .contentbooklist2,
 .contentbooklist3,
@@ -274,7 +271,6 @@ input[type="number"] {
     opacity: 0.5;
 }
 
-
 /*footer start*/
 footer{padding:15px;
     margin-top: 15px;
@@ -289,7 +285,6 @@ footer{padding:15px;
 footer a{
     color: #ffffff;
 }
-<<<<<<< HEAD
 
 .footer img {
     width: 30px;
@@ -299,14 +294,6 @@ footer a{
 }
 
 
-
-
-
-
-
-=======
-.footer img{width: 30px;height: 30px; margin: 5px;}
->>>>>>> 0ba18895d8b5f46d8bba8c4da0778101d9db064d
 
 /*media query for ipad*/
 @media (min-width: 768px) and (max-width: 960px) {
