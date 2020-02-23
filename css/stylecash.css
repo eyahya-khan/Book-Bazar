@@ -320,27 +320,32 @@ span.price{
     width: 25%;
     float:right;
     font-family: sans-serif;
+
 }
 
-
 /*footer start*/
-footer {
-    width: 100%;
+footer{padding:15px;margin-top: 15px;margin-bottom: 10px;
+    width: 100%; 
     text-align: center;
     color: #ffffff;
     background-color: #273A5E;
+    opacity: 0.9;
 }
 
-footer a {
+footer a{
     color: #ffffff;
 }
-
-.footer img {
+.footer img{
     width: 30px;
     height: 30px;
+<<<<<<< HEAD
     margin: 2px;
     border-radius:6px; 
 }
+=======
+     margin: 5px;
+     border-radius: 20px;}
+>>>>>>> 0ba18895d8b5f46d8bba8c4da0778101d9db064d
 
 
 

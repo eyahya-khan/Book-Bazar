@@ -1,43 +1,27 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+* {margin: 0;padding: 0;box-sizing: border-box;}
 
-body {
-    background-size: 90%;
-}
-
-.navigation {
-    grid-area: navigation;
-}
-
-.header {
-    grid-area: header;
-}
-
-.content {
-    grid-area: content;
-}
-
-.footer {
-    grid-area: footer;
-}
+body{background-size: 90%;}
+body{
+background-color: #2a2e43;}
+.navigation {grid-area: navigation;}
+.header {grid-area: header;}
+.content {grid-area: content;}
+.footer {grid-area: footer;}
 
 .container {
-    width: 100%;
-    text-align: center;
-
-    display: grid;
+  width: 100%;/*100% of 90% body background-size*/
+  text-align: center;
+    
+  display: grid;
     grid-gap: 1% 1%;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(4, minmax(60px, auto));
-
-    grid-template-areas:
-        "navigation"
-        "header"
-        "content"
-        "footer";
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(4, minmax(60px, auto));
+    
+  grid-template-areas: 
+    "navigation"
+    "header"
+    "content"
+    "footer";
 }
 
 /* Hide the checkbox */
@@ -45,7 +29,6 @@ input[type=checkbox] {
     position: fixed;
     visibility: hidden;
 }
-
 /* start toggle */
 .nav-alter {
     display: block;
@@ -57,45 +40,25 @@ input[type=checkbox] {
     cursor: pointer;
     z-index: 99;
     margin-left: 10px;
-    transition: margin .3s;
-}
-
+    transition: margin .3s;}
 .nav-alter span {
     position: relative;
     display: block;
-    height: 2px;
+    height: 4px;
     width: 45px;
     background: #000;
     transition: all .3s;
-    background-color: #000000;
-}
-
-.nav-alter span:nth-child(2) {
-    top: 12px;
-}
-
-.nav-alter span:nth-child(3) {
-    top: 24px;
-}
+    background-color: #ffffff;}
+.nav-alter span:nth-child(2) {top: 12px;}
+.nav-alter span:nth-child(3) {top: 24px;}
 
 /*moving toggle */
-input[type=checkbox]:checked ~ .nav-alter {
-    margin-right: 290px;
-}
-
-input[type=checkbox]:checked ~ .nav-alter span:nth-child(1) {
-    top: 15px;
-    transform: scale(0.5) rotate(-45deg);
-}
-
-input[type=checkbox]:checked ~ .nav-alter span:nth-child(2) {
-    display: none;
-}
-
-input[type=checkbox]:checked ~ .nav-alter span:nth-child(3) {
-    top: 13px;
-    transform: scale(0.5) rotate(45deg);
-}
+input[type=checkbox]:checked ~ .nav-alter {margin-right: 290px;}
+input[type=checkbox]:checked ~ .nav-alter span:nth-child(1) {top: 15px;
+    transform: scale(0.5) rotate(-45deg);}
+input[type=checkbox]:checked ~ .nav-alter span:nth-child(2) {display: none;}
+input[type=checkbox]:checked ~ .nav-alter span:nth-child(3) {top: 13px;
+    transform: scale(0.5) rotate(45deg);}
 
 /*menu moving*/
 input[type=checkbox]:checked ~ .menucontainer .menu {
@@ -107,12 +70,11 @@ input[type=checkbox]:checked ~ .menucontainer .menu {
 .menu {
     position: fixed;
     top: 0;
-    width: 100%;
+    width:100%;
     margin-top: 52px;
     margin-left: -570px;
     transition: margin .1s;
 }
-
 ul {
     list-style: none;
     margin-top: 15px;
@@ -120,7 +82,7 @@ ul {
 
 .menu ul ul {
     max-height: 0;
-    overflow: hidden;
+    overflow:hidden;
     transition: max-height .3s;
 }
 
@@ -156,9 +118,9 @@ li a:only-child::after {
 
 
 /*navigation start*/
-nav {
-    width: 100%;
-
+nav{
+    width: 100%; 
+    
     background-color: #273A5E;
     color: #ffffff;
     display: flex;
@@ -176,74 +138,83 @@ nav {
 }
 
 /*header start*/
-.header {
+.header{
     width: 100%;
     height: 220px;
-
-    position: fix;
+    
+    position:fix;
     overflow: auto;
-
+    
     background: url(../img/home.jpg);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size:cover;
     background-position: center;
-
+    
     display: flex;
     align-items: center;
 }
-
-.headerlogo {
-    margin-left: auto;
+.headerlogo{
+     margin-left: auto;
     margin-right: 20px;
 }
-
-.headerlogo img {
-    width: 70px;
-    height: 70px;
+.headerlogo img{
+    width:90px;
+    height: 90px; 
 }
 
 
 /*content for booklist*/
-.contentbooklist {
-    margin-top: 90px;
-    margin-bottom: 190px;
+.contentbooklist{
+    margin-top:90px ;
+    margin-bottom:190px;
     display: grid;
     grid-gap: 2% 2%;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: auto;
+     grid-template-columns: repeat(2,1fr);
+    grid-template-rows: auto; 
 }
 
-.contentbooklist1,
-.contentbooklist2,
-.contentbooklist3,
-.contentbooklist4,
-.contentbooklist5,
-.contentbooklist6,
-.contentbooklist7,
-.contentbooklist8,
-.contentbooklist9,
-.contentbooklist10,
-.contentbooklist11,
-.contentbooklist12 {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-}
+.contentbooklist1,.contentbooklist2,.contentbooklist3,
+.contentbooklist4,.contentbooklist5,.contentbooklist6,
+.contentbooklist7,.contentbooklist8,.contentbooklist9,
+.contentbooklist10,.contentbooklist11,.contentbooklist12{
+   box-shadow: 7px 7px 7px 7px white;
+   padding: 15px;margin:10px;
 
-.contentbooklist img {
-    height: 197px;
 }
+.rebrik{border-radius: 40px;}
+.rebrik >a{text-decoration:none; color:#FFFFFF;}
+.contentbooklist img{
+    height: 180px;
+}
+ .anime {
 
+    margin-top:20px;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: #fff;
+      background: rgba(0, 0, 0, 0.5);
+      color: #FFF;
+      padding: 10px;
+      text-align: center;
+      border-radius: 30px;
+      -webkit-transition: all 0.3s ease-out;
+      -moz-transition: all 0.3s ease-out;
+      -o-transition: all 0.3s ease-out;
+      transition: all 0.3s ease-out;
+    }
 .price {
-    color: grey;
-    font-size: 20px;
+  color: grey;
+  font-size: 20px;
 }
 
-.text {
-    font-family: cursive;
+.text{
+    font-family:cursive;
     font-size: 14px;
 }
 
-.quantity {
-    font-family: sans-serif;
+.quantity{
+    font-family:sans-serif;
     font-size: 16px;
 }
 
@@ -257,9 +228,9 @@ input[type="number"] {
 }
 
 
-.contentbooklist button {
+.contentbooklist button{
     color: #ffffff;
-    background-color: #4cadad;
+    background-color: #51AADF;
     text-align: center;
     width: 90%;
     font-size: 18px;
@@ -267,18 +238,16 @@ input[type="number"] {
     outline: 0;
     padding: 8px;
     margin-bottom: 15px;
-
+   
 }
-
-.contentbooklist button:hover {
+.contentbooklist button
+.contentbooklist button:hover{
     opacity: 0.5;
 }
 
 
 /*footer start*/
-footer{padding:15px;
-    margin-top: 15px;
-    margin-bottom: 10px;
+footer{padding:15px;margin-top: 15px;margin-bottom: 10px;
     width: 100%; 
     text-align: center;
     color: #ffffff;
@@ -289,127 +258,96 @@ footer{padding:15px;
 footer a{
     color: #ffffff;
 }
-<<<<<<< HEAD
 
-.footer img {
-    width: 30px;
-    height: 30px;
-    margin: 2px;
-    border-radius:6px;
-}
-
-
-
-
-
-
-
-=======
+.footer4{}
+.footer3{}
 .footer img{width: 30px;height: 30px; margin: 5px;}
->>>>>>> 0ba18895d8b5f46d8bba8c4da0778101d9db064d
-
-/*media query for ipad*/
-@media (min-width: 768px) and (max-width: 960px) {
-
-    .nav-alter {
-        display: none;
-    }
-
-    .menu {
-        margin-top: 0;
-        margin-left: 0;
-        width: 85%;
-    }
-
-    .menu ul {
-        padding: 0;
-        margin: 0;
-        position: relative;
-        list-style: none;
-    }
-
-    .menu ul li {
-        display: inline-block;
-        background-color: rgba(0, 0, 0, 0.4);
-        width: auto;
-        position: relative;
-        margin-left: -4px;
-    }
-
-    .menu a {
-        display: block;
-        padding: 0 10px;
-        color: #FFF;
-        font-size: 16px;
-        line-height: 60px;
-        text-decoration: none;
-    }
-
-    .menu a:hover {
-        background-color: #000000;
-    }
-
-    /* keeps the dropdown invisible and assign style to list*/
-    .menu ul ul {
-        display: none;
-        position: absolute;
-        overflow: visible;
-        top: 60px;
-        margin-left: -32px;
-        width: 147px;
-    }
-
-    /* show dropdown 1st 2nd level on hover */
-    .menu ul li:hover > ul {
-        display: inherit;
-    }
-
-    /* 1st level */
-    .menu ul ul li {
-        display: list-item;
-        float: none;
-        position: relative;
-    }
-
-
-    nav {
-        height: 100%;
-    }
-
-.navcart img {
-        margin-right: 90px;
-    }
-
-.header {
-        height: 300px;
-    }
-
-    .headerlogo img {
-        width: 90px;
-        height: 90px;
-    }
-
-    .contentbooklist {
-        margin-top: 0;
-        margin-bottom: 50px;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: auto;
-    }
-
-
-
-    footer {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: auto;
-    }
-
+.footer2{}
+.footer1{}
+/*formulair*/
+section{ 
+background-image:url('img/contact.jpg');
+margin:10px;
+background-size: cover;
+background-repeat: no-repeat;
+}
+h1{color: #ffffff;padding-top: 20px;}
+label{color: #ffffff;}
+.form-style-1 {
+    margin:10px auto;
+    max-width: 500px;
+    padding: 20px 12px 10px 20px;
+    font: 13px "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+.form-style-1 li {
+    padding: 0;
+    display: block;
+    list-style: none;
+    margin: 10px 0 0 0;
+}
+.form-style-1 label{
+    margin:0 0 3px 0;
+    padding:0px;
+    display:block;
+    font-weight: bold;
+}
+.form-style-1 input[type=text], 
+.form-style-1 input[type=email],
+textarea, 
+select{
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    border:1px solid #BEBEBE;
+    padding: 7px;
+    margin:0px;
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+    outline: none;  
+}
+.form-style-1 input[type=text]:focus, 
+.form-style-1 input[type=email]:focus,
+.form-style-1 textarea:focus, 
+.form-style-1 select:focus{
+    -moz-box-shadow: 0 0 8px #88D5E9;
+    -webkit-box-shadow: 0 0 8px #88D5E9;
+    box-shadow: 0 0 8px #88D5E9;
+    border: 1px solid #88D5E9;
+}
+.form-style-1 .field-divided{
+    width: 100%;
 }
 
-
-
-
+.form-style-1 .field-long{
+    width: 100%;
+}
+.form-style-1 .field-long{
+    width: 100%;
+}
+.form-style-1 .field-select{
+    width: 100%;
+}
+.form-style-1 .field-textarea{
+    height: 180px;
+}
+.form-style-1 input[type=submit], .form-style-1 input[type=button]{
+    background: #51AADF;
+    padding: 8px 15px 8px 15px;
+    border: none;
+    color: #fff;
+    cursor:pointer ;
+}
+.form-style-1 input[type=submit]:hover, .form-style-1 input[type=button]:hover{
+    background: #4691A4;
+    box-shadow:none;
+    -moz-box-shadow:none;
+    -webkit-box-shadow:none;
+}
+.form-style-1 .required{
+    color:#09FBF8;
+}
 
 @media (min-width: 960px) and (max-width: 1024px) {
 
@@ -481,7 +419,7 @@ footer a{
         margin-top: 0;
         margin-bottom: 10px;
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(3, 1fr);
         grid-template-rows: auto;
     }
 
@@ -609,3 +547,96 @@ footer a{
         margin-right: 15px;
     }
 }
+/*media query for ipad*/
+@media (min-width: 768px) and (max-width: 960px){
+
+.nav-alter {
+        display: none;
+    }
+.menu {
+       margin-top: 0;
+        margin-left: 0; 
+    }
+
+.menu ul {
+        padding: 0;
+        margin: 0;
+        position: relative;
+        list-style: none;
+    }
+
+.menu ul li {
+        display: inline-block;
+        background-color: rgba(0, 0, 0, 0.4);
+        width: auto;
+        position: relative;
+        margin-left: -4px;
+    }
+
+.menu a {
+        display: block;
+        padding: 0 10px;
+        color: #FFF;
+        font-size: 16px;
+        line-height: 60px;
+        text-decoration: none;
+    }
+
+.menu a:hover {
+        background-color: #000000;
+    }
+
+    /* keeps the dropdown invisible and assign style to list*/
+.menu ul ul {
+        display: none;
+        position: absolute;
+        overflow: visible;
+        top: 60px;
+        margin-left: -32px;
+        width: 147px;
+    }
+
+    /* show dropdown 1st 2nd level on hover */
+.menu ul li:hover > ul {
+        display: inherit;
+    }
+
+    /* 1st level */
+.menu ul ul li {
+        display: list-item;
+        float: none;
+        position: relative;
+    }
+
+    
+nav{height: 100%;}
+.navregister{margin-left:20px;}
+.navcart img{margin-right: 90px;}
+
+.header{height: 300px;}
+
+.headerlogo img{
+    width: 90px;
+    height: 90px; 
+}
+
+.contentbooklist{
+    margin-top:0;
+    margin-bottom:50px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: auto;
+}
+
+    
+    
+footer{
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: auto;
+    }   
+
+}
+
+
+
