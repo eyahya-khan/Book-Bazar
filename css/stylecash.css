@@ -335,20 +335,12 @@ footer a{
 .footer img{
     width: 30px;
     height: 30px;
-<<<<<<< HEAD
     margin: 2px;
     border-radius:6px; 
 }
-=======
-     margin: 5px;
-     border-radius: 20px;}
->>>>>>> 0ba18895d8b5f46d8bba8c4da0778101d9db064d
 
 
 
-
-
-/*IPADDDDDDDDDDDD*/
 
 /*media query for ipad*/
 @media (min-width: 768px) and (max-width: 960px) {

@@ -158,7 +158,6 @@ li a:only-child::after {
 /*navigation start*/
 nav {
     width: 100%;
-
     background-color: #273A5E;
     color: #ffffff;
     display: flex;
@@ -199,13 +198,11 @@ nav {
     width: 70px;
     height: 70px;
 }
+
 /*dropdown cart*/
 table,h2{
     width: 98%;
     color: #000000;
-}
-table tbody tr td img{
-   
 }
 
 .cartcheckout{
