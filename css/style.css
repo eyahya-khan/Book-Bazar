@@ -170,7 +170,9 @@ nav {
 }
 
 .navcart img {
-    height: 30px;
+    height: 40px;
+    border-radius: 20px;
+    margin-right: 15px;
 }
 
 /*header start*/
