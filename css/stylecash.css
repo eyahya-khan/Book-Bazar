@@ -64,13 +64,11 @@ input[type=checkbox] {
 .nav-alter span {
     position: relative;
     display: block;
-    height: 2px;
+    height: 4px;
     width: 45px;
     background: #000;
     transition: all .3s;
-    background-color: #000000;
-}
-
+    background-color: #ffffff;}
 .nav-alter span:nth-child(2) {
     top: 12px;
 }
